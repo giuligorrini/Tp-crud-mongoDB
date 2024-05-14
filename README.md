@@ -6,14 +6,15 @@ utilizando MongoDB como base de datos. El sistema permite la gestión de product
 con rutas CRUD para cada una de estas entidades. Además, se implementa autenticación de usuarios con JWT y encriptación de contraseñas.
 
 ## Tecnologías Utilizadas
-- MongoDB
-- Mongoose
-- Node.js
-- Express.js
-- JWT 
-- Bcrypt 
-- dotenv 
-
+JavaScript (con Node.js y Express)
+TypeScript (con Node.js y Express)
+MongoDB
+Mongoose
+bcrypt
+JSON Web Tokens (JWT)
+dotenvnv 
+## Funcionalidad
+Gestión de Productos: Agrega productos para jugadores de cestoball,como remeras de la seleccion Argentina,tops,zapatillas ,entre otros. Gestión de Usuarios: Regístrate como usuario y accede para administrar tu perfil y tus compras. Gestión de Categorías: Organiza los productos en categorías. Autenticación de Usuarios: Mantén tus datos seguros con un sistema de inicio de sesión utilizando JWT.
 ## Instalación y Ejecución
 1. Clona este repositorio:
 
