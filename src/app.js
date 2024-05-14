@@ -2,7 +2,7 @@ import express from "express";
 import bodyparser from "body-parser";
 import { connectDB } from "./db.js";
 import { PORT } from "./config.js";
-import userRoute from "./routes/userRoutes.js";
+import userRoute from "./routes/userRoute.js";
 import productRoute from "./routes/productRoute.js";
 import categoryRoute from "./routes/categoryRoute.js";
 

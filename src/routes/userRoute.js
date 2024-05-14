@@ -1,6 +1,7 @@
 import express from "express";
 import { create,deleteUser,get,updtate, validate } from "../controllers/userController.js";
-import { verifyTokenMiddleware } from "../../middlewares/verifyTokenMiddleware.js";
+import { verifyTokenMiddleware } from "../middlewares/verifyTokenMiddleware.js";
+
 
 const userRoute = express.Router();
 

@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+
 const statusEnum=["AVAILABLE","NOT AVAILABLE","DISCONTINUED"];
 
 const productSchema = new mongoose.Schema({
