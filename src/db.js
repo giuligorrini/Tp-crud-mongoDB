@@ -10,7 +10,7 @@ export const connectDB = async ()=> {
         await mongoose.connect(MONGOURI);
         console.log("Database connected");
     } catch (error){
-        console.log("Error connectig to dababase:",error);
+        console.error("Error connectig to dababase:",error);
         process.exit(1)
     }
 };

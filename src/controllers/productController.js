@@ -1,10 +1,10 @@
-import Product from "../models/productModels.js";
+import Product from "../models/productModel.js";
 
 
 export const getAll =async (req,res)=>{
     try{
-        const product = await Product.find().populate("category");
-        if(products.length===0){
+        const products = await Product.find().populate("category");
+        if(products.length ===0){
             return res.status(404).json({message:"There are no products"});
         }
         res.status(200).json(products);
@@ -16,7 +16,7 @@ export const getAll =async (req,res)=>{
 export const create = async (req,res)=>{
     try{
         const productData = new Product(req.body);
-        const{name}=productData;
+        const {name} = productData;
         const productExist = await Product.findOne({name});
         if(productExist){
             return res.status(400).json({message:`Product ${name} already exist`});
@@ -31,8 +31,8 @@ export const create = async (req,res)=>{
 export const findOne = async (req,res)=>{
     try{
         const name = req.params.name;
-        const parsdName=name.trim().toLowerCase();
-        const productExist= await Product.findOne({name:parsedName});
+        const parsedName = name.trim().toLowerCase();
+        const productExist= await Product.findOne({name: parsedName});
         if (!productExist){
             return res.status(400).json({message:`Product ${name} not exist`});
         }

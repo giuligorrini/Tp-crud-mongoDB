@@ -32,7 +32,7 @@ const productSchema = new mongoose.Schema({
     },
     category:{
         type:mongoose.Schema.Types.ObjectId,ref:"category" },
-        destacado:Boolean,
+      destacado:Boolean,
 });
 
 productSchema.set("toJSON",{getters:true,setters:true});

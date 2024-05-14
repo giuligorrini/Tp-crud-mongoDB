@@ -15,7 +15,7 @@ const clubEnum=[
 const userSchema = new mongoose.Schema({
     name:{
         type:String,
-        require:true,
+        required:true,
         maxlength:16,
         minlenght:2,
         trim:true,
@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema({
     },
     lastName:{
         type:String,
-        require:true,
+        required:true,
         maxlength:16,
         minlenght:2,
         trim:true,
@@ -31,7 +31,7 @@ const userSchema = new mongoose.Schema({
     },
     email:{
         type:String,
-        require:true,
+        required:true,
         maxlength:30,
         minlenght:8,
         trim:true,
@@ -41,11 +41,11 @@ const userSchema = new mongoose.Schema({
     },
     club:{
         type:String,
-        require:true,
+        required:true,
         enum:clubEnum,
         validate:{
             validator: function(v){
-                return clubEnum.incluedes(v);
+                return clubEnum.includes(v);
             }, message: props => `${props.value} no es un club valido`,
         },
     },
@@ -72,9 +72,9 @@ const userSchema = new mongoose.Schema({
 });
 
 userSchema.pre("save",function (next){
-    this.password = bcrypt.hashSync(this.password,10);
+    this.password=bcrypt.hashSync(this.password,10);
     next();
-});
+})
 
 export default mongoose.model("user",userSchema);
 
